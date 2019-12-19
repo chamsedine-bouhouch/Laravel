@@ -1,0 +1,131 @@
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+.bg-primary {
+  background: #4ad7d1 !important;
+}
+.owl-carousel.home-slider .slider-item .slider-text h1 {
+  color: #4ad7d1;
+}
+.span {
+  background: #4ad7d1 !important;
+}
+.topper .icon {
+  background: #4ad7d1 !important;
+}
+.btn.btn-primary {
+  background: #4ad7d1;
+  border: 1px solid #4ad7d1;
+  color: #fff;
+}
+.btn.btn-primary:hover {
+  border: 1px solid #4ad7d1 !important;
+  background: transparent !important;
+  color: #4ad7d1 !important;
+}
+.btn.btn-secondary {
+  background: #4ad7d1 !important;
+  border: 1px solid #4ad7d1 !important;
+  color: #fff !important;
+}
+.bg-top {
+  background: white !important;
+}
+.ftco-navbar-light {
+  background: transparent !important;
+  background: #001730 !important;
+  z-index: 3;
+  padding: 0;
+}
+.ftco-navbar-light .navbar-nav > .nav-item.active > a {
+  color: #4ad7d1 !important;
+}
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
+  color: #4ad7d1 !important;
+}
+
+.topper .text {
+  color: #000000 !important;
+}
+.ftco-margin-top .request-quote .subheading {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  color: #001730 !important;
+}
+
+.owl-carousel.home-slider .slider-item .slider-text h1 span {
+  color: #001730 !important;
+}
+.btn-info {
+  background: #4ad7d1 !important;
+  border: 1px solid #4ad7d1 !important;
+  color: #fff !important;
+}
+a {
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  color: #001730;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #4ad7d1;
+  outline: none !important;
+}
+h1,
+h2 {
+  color: #001730;
+}
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+}
+.staff .ftco-social {
+  background: #fe4a49 !important;
+}
+.staff .text .position {
+  color: #fe4a49 !important;
+}
+.staff:hover .text h3,
+.staff:focus .text h3 {
+  color: #fe4a49;
+}
+#section-counter:after {
+  background: #fe4a49;
+}
+.blog-entry .meta-date {
+  display: inline-block;
+  background: #fe4a49;
+}
+.project:after {
+  background: #4ad7d1 !important ;
+}
+.services-2:nth-child(2) {
+  background: #4ad7d1;
+}
+.site-block-27 ul li.active a,
+.site-block-27 ul li.active span {
+  background: #4ad7d1 !important;
+  color: #fff;
+  border: 1px solid transparent;
+}
+.text-primary {
+  color: #fe4a49 !important;
+}
