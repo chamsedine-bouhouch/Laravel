@@ -49,7 +49,7 @@ a {
     visibility: visible; }
 
 .btn {
-  text-transform: uppercase;
+  text-transform: lowercase !important;
   position: relative;
   -webkit-transition: 0.2s all ease-in-out !important;
   -o-transition: 0.2s all ease-in-out !important;
@@ -68,9 +68,11 @@ a {
     font-size: 14px !important;
     padding: 10px 20px !important; }
   .btn.btn-primary {
-    font-size: 17px;
-    font-weight: 300;
-    letter-spacing: .2em; }
+    font-size:1rem !important;
+    font-weight: 400;
+    letter-spacing: .05em; 
+    text-transform: lowercase !important;
+}
   .btn:hover {
     -webkit-box-shadow: 0 5px 20px -7px rgba(0, 0, 0, 0.9) !important;
     box-shadow: 0 5px 20px -7px rgba(0, 0, 0, 0.9) !important;

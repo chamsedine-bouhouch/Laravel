@@ -3,10 +3,10 @@
 <div class="collapse navbar-collapse" id="ftco-nav">
    <ul class="navbar-nav mr-auto">
     <li class="nav-item"><a href="./" class="nav-link pl-0">Acceuil</a></li>
-    <li class="nav-item"><a href="services" class="nav-link">Services</a></li>
-    <li class="nav-item "><a href="about" class="nav-link">À Propos</a></li>
+    <li class="nav-item"><a href="services" class="nav-link">Demandez une Intervention </a></li>
+<!--     <li class="nav-item "><a href="about" class="nav-link">À Propos</a></li>
     <li class="nav-item"><a href="projects" class="nav-link">Projets</a></li>
-    <li class="nav-item "><a href="blog" class="nav-link">Blog</a></li>
+    <li class="nav-item "><a href="blog" class="nav-link">Blog</a></li> -->
     <li class="nav-item active"><a href="contact" class="nav-link">Contact</a></li>
   </ul>
 </div>
@@ -19,7 +19,7 @@
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
             <h1 class="mb-2 bread">Contactez Nous</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Acceuil <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact <i class="ion-ios-arrow-forward"></i></span></p>
+            <p class="breadcrumbs"><span class="mr-2"><a href="./" >Acceuil <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>

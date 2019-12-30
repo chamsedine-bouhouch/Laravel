@@ -20,10 +20,29 @@
 .topper .icon {
   background: #4ad7d1 !important;
 }
+
+.btn {
+   text-transform: none !important;
+    
+    
+  letter-spacing: .05em !important;
+ 
+ 
+      
+}
+
 .btn.btn-primary {
   background: #4ad7d1;
   border: 1px solid #4ad7d1;
   color: #fff;
+   font-weight: 400 !important;
+  
+  font-size: 1rem !important;
+
+ 
+ 
+ 
+  text-transform: none !important;    
 }
 .btn.btn-primary:hover {
   border: 1px solid #4ad7d1 !important;
@@ -129,3 +148,5 @@ h5,
 .text-primary {
   color: #fe4a49 !important;
 }
+
+

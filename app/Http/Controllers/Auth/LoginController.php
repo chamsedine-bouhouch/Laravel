@@ -36,4 +36,25 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+    // Roles
+    // protected function sendLoginResponse(Request $request)
+    // {
+    //     $request->session()->regenerate();
+
+    //     $this->clearLoginAttempts($request);
+
+    //     foreach ($this->guard()->user()->role as $role) {
+    //         if ($role == 'superAdmin') {
+    //             return redirect('dashboard/superAdmin');
+    //         } elseif ($role == 'admin') {
+    //             return redirect('dashboard/admin');
+    //         }elseif ($role == 'technicien') {
+    //             return redirect('dashboard/technicien');
+    //         }elseif ($role == 'user') {
+    //             return redirect('dashboard/user');
+    //         }
+
+            
+    //     }
+    // }
 }

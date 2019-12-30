@@ -25,7 +25,7 @@ class ContactController extends Controller {
 		// 	$message->to('bouhouchchamseddine@gmail.com')->subject('Contact AllooSerice');
 		// });
 
-		return view('confirm');
+		return view('contact.confirm');
 	}
 
 }

@@ -1,15 +1,15 @@
 @extends('templateServices')
 @section('contenu')
-@include('front.appJs')
+
 
 
 <div class="collapse navbar-collapse" id="ftco-nav">
  <ul class="navbar-nav mr-auto">
   <li class="nav-item "><a href="./" class="nav-link pl-0">Acceuil</a></li>
-  <li class="nav-item active"><a href="services" class="nav-link">Services</a></li>
-  <li class="nav-item"><a href="about" class="nav-link">À Propos</a></li>
+  <li class="nav-item active"><a href="services" class="nav-link">Demandez une Intervention</a></li>
+<!--   <li class="nav-item"><a href="about" class="nav-link">À Propos</a></li>
   <li class="nav-item"><a href="projects" class="nav-link">Projets</a></li>
-  <li class="nav-item"><a href="blog" class="nav-link">Blog</a></li>
+  <li class="nav-item"><a href="blog" class="nav-link">Blog</a></li> -->
   <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
 </ul>
 </div>
@@ -20,7 +20,7 @@
     <div class="row no-gutters slider-text align-items-center justify-content-center">
       <div class="col-md-9 ftco-animate text-center">
         <h1 class="mb-2 bread">Services</h1>
-        <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Acceuil <i class="ion-ios-arrow-forward"></i></a></span> <span>Services <i class="ion-ios-arrow-forward"></i></span></p>
+        <p class="breadcrumbs"><span class="mr-2"><a href="./">Acceuil <i class="ion-ios-arrow-forward"></i></a></span> <span>Services <i class="ion-ios-arrow-forward"></i></span></p>
       </div>
     </div>
   </div>
@@ -76,7 +76,7 @@
                     <div class="dropdown mr-1 ml-md-auto">
                       <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" id="dropdownMenuOffset"
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Latest
+                      Récent
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
                       <a class="dropdown-item" href="index.blade.php?categorie=electricite">Electricité</a>
@@ -85,9 +85,9 @@
                       <a class="dropdown-item" href="#">Chauffage</a>
                     </div>
                   </div>
-                  <div class="btn-group">
+    <!--               <div class="btn-group">
                     <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" id="dropdownMenuReference"
-                    data-toggle="dropdown">Reference</button>
+                    data-toggle="dropdown"> </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
                       <a class="dropdown-item" href="#">Relevance</a>
                       <a class="dropdown-item" href="#">Name, A to Z</a>
@@ -96,7 +96,7 @@
                       <a class="dropdown-item" href="#">Price, low to high</a>
                       <a class="dropdown-item" href="#">Price, high to low</a>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>

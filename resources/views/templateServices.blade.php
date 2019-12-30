@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AllooService</title>
+  <title>DaryDar</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
@@ -33,22 +33,21 @@
 </head>
 <body>
 
-
 <!--nav bar start  -->
 <div class="bg-top navbar-light">
   <div class="container">
     <div class="row no-gutters d-flex align-items-center align-items-stretch">
-      <div class="col-md-4 d-flex align-items-center py-4">
-        <a class="navbar-brand" href="index.php">
-          <img src="images/logo.png" alt="mon logo" style=width:40px />Alloo Service</a>
+      <div class="col-md-4 d-flex align-items-center mt-1">
+        <a class="navbar-brand" href="/" class="d-flex">
+          <img src="images/logo-color.png" alt="mon logo" style="height:60px"/></a>
         </div>  
         <div class="col-lg-8 d-block">
           <div class="row d-flex">
             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
               <div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
               <div class="text d-flex align-items-center">
-                <span>allooservice.contact@gmail.com</span>
-                <!-- <a href=""></a> href="mailto:allooservice.contact@gmail.com">Send me an email</a> -->
+                <span>DaryDar.contact@gmail.com</span>
+                <!-- <a href=""></a> href="mailto:DaryDar.contact@gmail.com">Send me an email</a> -->
               </div>
             </div>
             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
@@ -59,8 +58,8 @@
             </div>
             <div class="col-md topper d-flex align-items-center align-items-stretch">
               <p class="mb-0 d-flex d-block">
-                <a href="form.php" class="btn btn-primary d-flex align-items-center justify-content-center">
-                  <span>Passer une commande</span>
+                <a href="home" class="btn btn-primary d-flex align-items-center justify-content-center">
+                  <span>Se connecter</span>
                 </a>
               </p>
             </div>
@@ -94,11 +93,11 @@
           <div class="col-md">
             <div class="ftco-footer-widget mb-5">
               <h2 class="ftco-heading-2 logo"><img src="images/logo.png" alt="mon logo" style=width:40px />Alloo Service</a></h2>
-              <p>AllooService centralise tous les techniciens dans le secteur du bâtiment pour vous servir sur grand Tunis  .</p>
+              <p>DaryDar centralise tous les techniciens dans le secteur du bâtiment pour vous servir sur grand Tunis  .</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                <li class="ftco-animate"><a href="https://twitter.com/AllooService"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.facebook.com/AllooService"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.instagram.com/allooservice/"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="https://twitter.com/DaryDar"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/DaryDar"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/DaryDar/"><span class="icon-instagram"></span></a></li>
               </ul>
             </div>
             
@@ -124,7 +123,7 @@
               <div class="block-21 mb-4 d-flex">
                 <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
                 <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                  <h3 class="heading"><a href="#">Entretenir votre chaudière</a></h3>
                   <div class="meta">
                     <div><a href="#"><span class="icon-calendar"></span> Feb. 07, 2018</a></div>
                     <div><a href="#"><span class="icon-person"></span> Admin</a></div>
@@ -135,7 +134,7 @@
               <div class="block-21 mb-5 d-flex">
                 <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
                 <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                  <h3 class="heading"><a href="#">Réglage optimale de votre climatiseur</a></h3>
                   <div class="meta">
                     <div><a href="#"><span class="icon-calendar"></span> Feb. 07, 2018</a></div>
                     <div><a href="#"><span class="icon-person"></span> Admin</a></div>
@@ -145,23 +144,25 @@
               </div>
             </div>
           </div>
-          <div class="col-md">
+              
+     <div class="col-md">
             <div class="ftco-footer-widget mb-5">
               <h2 class="ftco-heading-2">Recevez nos nouvelles</h2>
               
 
-<!--               {!! Form::open(['route' => 'storeEmail']) !!}
+              {!! Form::open(['route' => 'storeEmail']) !!}
               <div class="form-group  {!! $errors->has('email') ? 'has-error' : '' !!}">
                 {!! Form::email('email', null, array('class' => 'form-control', 'placeholder' => 'Entrez votre email')) !!}
                 {!! $errors->first('email', '<small class="help-block">:message</small>') !!}
               </div>
               {!! Form::submit('Envoyer !', ['class' => 'btn btn-info pull-right']) !!}
               {!! Form::close() !!}
- -->
+
 
 
             </div>
         </div>
+     
         <div class="row">
           <div class="col-md-12 text-center">
 

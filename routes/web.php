@@ -10,13 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/about', 'AboutController@showabout');
+// Route::get('/about', 'AboutController@showabout');
 // 
 Route::resource('services', 'ServicesController');
-Route::get('/single-service', 'SingleServiceController@show_single_service');
-Route::get('/projects', 'ProjectsController@showprojects');
-Route::get('/blog', 'BlogController@showblog');
-Route::get('/single-blog', 'SingleBlogController@show_single_blog');
+// Route::get('/single-service', 'SingleServiceController@show_single_service');
+// Route::get('/projects', 'ProjectsController@showprojects');
+// Route::get('/blog', 'BlogController@showblog');
+// Route::get('/single-blog', 'SingleBlogController@show_single_blog');
 
 Route::get('contact', 'ContactController@getForm');
 Route::post('contact', 'ContactController@postForm');

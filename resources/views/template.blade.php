@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AllooService</title>
+  <title>DaryDar</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
@@ -38,16 +38,16 @@
 <div class="bg-top navbar-light">
   <div class="container">
     <div class="row no-gutters d-flex align-items-center align-items-stretch">
-      <div class="col-md-4 d-flex align-items-center py-4">
-        <a class="navbar-brand" href="index.php">
-          <img src="images/logo.png" alt="mon logo" style=width:40px />Alloo Service</a>
+      <div class="col-md-4 d-flex align-items-center mt-1">
+        <a class="navbar-brand" href="/" class="d-flex">
+          <img src="images/logo-color.png" alt="mon logo" style="height:60px"/></a>
         </div>  
         <div class="col-lg-8 d-block">
           <div class="row d-flex">
             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
               <div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
               <div class="text d-flex align-items-center">
-                <span>allooservice.contact@gmail.com</span>
+                <span>contact.darydar@gmail.com</span>
                 <!-- <a href=""></a> href="mailto:allooservice.contact@gmail.com">Send me an email</a> -->
               </div>
             </div>
@@ -93,8 +93,8 @@
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-5">
-              <h2 class="ftco-heading-2 logo"><img src="images/logo.png" alt="mon logo" style=width:40px />Alloo Service</a></h2>
-              <p>AllooService centralise tous les techniciens dans le secteur du bâtiment pour vous servir sur grand Tunis  .</p>
+              <h2 class="ftco-heading-2 logo "><img src="images/logo.png" alt="mon logo" style="width:40px" class="mr-3" />DaryDar</a></h2>
+              <p>DaryDar centralise tous les techniciens dans le secteur du bâtiment pour vous servir sur grand Tunis  .</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                 <li class="ftco-animate"><a href="https://twitter.com/AllooService"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="https://www.facebook.com/AllooService"><span class="icon-facebook"></span></a></li>
@@ -158,6 +158,8 @@
               </div>
               {!! Form::submit('Envoyer !', ['class' => 'btn btn-info pull-right']) !!}
               {!! Form::close() !!}
+
+             
 
 
 
