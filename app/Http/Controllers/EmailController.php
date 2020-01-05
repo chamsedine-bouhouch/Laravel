@@ -19,10 +19,10 @@ class EmailController extends Controller
 	{
 		// dd($request);
 		$email = new Newsletter;
-		$email->email = $request->input('email');
+		$email->mailing = $request->input('mailing');
 		$email->save();
 		
-		return view('home');
+		return view('home')->with('message', 'Email envoyée avec succès');
 	}
 	public function techForm(PostRequest $request)
 	{
@@ -34,8 +34,8 @@ class EmailController extends Controller
 		$post->phone = $request->input('phone');
 		$post->texte = $request->input('texte');
 		$post->save();
-		
-		return view('email_ok');
+		$mess= 'hello';
+		return view('home', ['mess' => 'Victoria']);
 	}
 
 

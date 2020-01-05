@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Darydar</title>
+  <title>AllooService</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,8 +25,8 @@
   <!--  -->
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
- --><!-- style login-register -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /> -->
+  <!-- style login-register -->
 
   <!-- <style>
     @import "compass/css3";
@@ -223,31 +223,31 @@ textarea {
 <body>
 
 
-  <!--nav bar start  -->
-  <div class="bg-top navbar-light">
-    <div class="container">
-      <div class="row no-gutters d-flex align-items-center align-items-stretch">
-        <div class="col-md-4 d-flex align-items-center py-4">
-          <a class="navbar-brand" href="index.php">
-            <img src="../images/logo.png" alt="mon logo" style=width:40px /></a>
-          </div>  
-          <div class="col-lg-8 d-block">
-            <div class="row d-flex">
-              <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                <div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-                <div class="text d-flex align-items-center">
-                  <span>contact.darydar@gmail.com</span>
-                  <!-- <a href=""></a> href="mailto:allooservice.contact@gmail.com">Send me an email</a> -->
-                </div>
+<!--nav bar start  -->
+<div class="bg-top navbar-light">
+  <div class="container">
+    <div class="row no-gutters d-flex align-items-center align-items-stretch">
+      <div class="col-md-4 d-flex align-items-center py-4">
+        <a class="navbar-brand" href="index.php">
+          <img src="../images/logo.png" alt="mon logo" style=width:40px /></a>
+        </div>  
+        <div class="col-lg-8 d-block">
+          <div class="row d-flex">
+            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+              <div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+              <div class="text d-flex align-items-center">
+                <span>contact.darydar@gmail.com</span>
+                <!-- <a href=""></a> href="mailto:allooservice.contact@gmail.com">Send me an email</a> -->
               </div>
-              <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                <div class="icon d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
-                <div class="text d-flex align-items-center">
-                  <span> 52 369 586</span>
-                </div>
+            </div>
+            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+              <div class="icon d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+              <div class="text d-flex align-items-center">
+                <span> 52 369 586</span>
               </div>
-              <div class="col-md topper d-flex align-items-center align-items-stretch">
-                <p class="mb-0 d-flex d-block">
+            </div>
+            <div class="col-md topper d-flex align-items-center align-items-stretch">
+              <p class="mb-0 d-flex d-block">
                  <a href="#" class="btn btn-primary d-flex align-items-center justify-content-center">
                   <span>Se connecter</span>
                 </a>
@@ -271,10 +271,10 @@ textarea {
         </div>
       </form>
 
-      <div class="collapse navbar-collapse" id="ftco-nav">
-       <ul class="navbar-nav mr-auto">
-        <li class="nav-item "><a href="../" class="nav-link pl-0">Acceuil</a></li>
-        <li class="nav-item active"><a href="../services" class="nav-link">Demandez une Intervention</a></li>
+  <div class="collapse navbar-collapse" id="ftco-nav">
+   <ul class="navbar-nav mr-auto">
+    <li class="nav-item "><a href="../" class="nav-link pl-0">Acceuil</a></li>
+    <li class="nav-item active"><a href="../services" class="nav-link">Demandez une Intervention</a></li>
 <!--     <li class="nav-item"><a href="../about" class="nav-link">À Propos</a></li>
     <li class="nav-item"><a href="../projects" class="nav-link">Projets</a></li>
     <li class="nav-item"><a href="../blog" class="nav-link">Blog</a></li> -->
@@ -301,185 +301,151 @@ textarea {
   <div class="container">
     <div class="row">
       <div class="col-lg-8 ftco-animate">
+
+
+
         <div class="comment-form-wrap pt-5">
           <h3 class="mb-5 h4 font-weight-bold text-center">Demandez une intervention en <span style="color:blue;">{{$service->categorie}}</span></h3>
 
-<!-- Formulaire de la Demande  -->
-              {!! Form::open(['route' => 'storeDemande']) !!}
-   
-<!--           <form method="POST" action="{!! url('services') !!}" class="p-5 bg-light">
- -->            <p><strong>Détails de l'intervention:</strong></p>
-           <div class="form-row">
-            <div class="col-md-4 mb-3">
-              <div class="form-group {!! $errors->has('catégorie') ? 'has-error' : '' !!}">
-               <label for="name">Catégorie *</label>
-               <div class="form-field">
-                 <div class="select-wrap">
-                  <select name="catégorie" id="catégorie" class="custom-select">
-                   <option value="">Choisir la catégorie</option>
-                   <option @if($service->categorie == "electricite") selected = "selected" @endif value="electricite">Électricité</option>
-                   <option @if($service->categorie == "plomberie") selected = "selected" @endif value="plomberie">Plomberie</option>
-                   <option @if($service->categorie == "climatisation") selected = "selected" @endif value="climatisation">Climatisation</option>
-                   <option @if($service->categorie == "chauffage") selected = "selected" @endif value="chauffage">Chauffage</option>
-                   <option value="">Autre</option>
-                 </select>
-               </div>
-             </div>
-             {!! $errors->first('catégorie', '<small class="help-block" style="color: #dc3545"  style="color: #dc3545">:message</small>') !!}
-           </div>
-         </div> 
 
-         <div class="col-md-4 mb-3">
-          <div class="form-group {!! $errors->has('service') ? 'has-error' : '' !!}">
-           <label for="name">Type *</label>
-           <div class="form-field">
-             <div class="select-wrap">
-              <select name="type" id="type" class="custom-select">
-               <option value="">Choisir un type</option>
-               <option @if($service->type == "installation") selected = "selected" @endif value="installation">Installation</option>
-               <option @if($service->type == "depannage") selected = "selected" @endif value="depannage">Dépannage</option>
-             </select>
-           </div>
-         </div>
-       </div> 
-     </div>
 
-     <div class="col-md-4 mb-3">
-      <div class="form-group {!! $errors->has('service') ? 'has-error' : '' !!}">
-       <label for="service">Service *</label>
-       <div class="form-field">
-         <div class="select-wrap">
-          <select name="service" id="service" class="custom-select">
-           <option value="">Choisir l'intervention</option>
-           @foreach ($similarServices as $similarService) {
-           <option value="{{$similarService->titre}}"> {{$similarService->titre}}</option>
-         }
-         @endforeach
+
+                <form action="#" class="p-5 bg-light">
+                   <div class="form-row">
+                    <div class="col-md-4 mb-3">
+
+                  <div class="form-group {!! $errors->has('categorie') ? 'has-error' : '' !!}">
+                         <label for="name">Catégorie *</label>
+     <div class="form-field">
+       <div class="select-wrap">
+
+        <select name="categorie" id="categorie" class="custom-select">
+         <option value="">Choisir la catégorie</option>
+
+
+         <option @if($service->categorie == "electricite") selected = "selected" @endif value="electricite">Électricité</option>
+         <option @if($service->categorie == "plomberie") selected = "selected" @endif value="plomberie">Plomberie</option>
+         <option @if($service->categorie == "climatisation") selected = "selected" @endif value="climatisation">Climatisation</option>
+         <option @if($service->categorie == "chauffage") selected = "selected" @endif value="chauffage">Chauffage</option>
+         <option value="">Autre</option>
        </select>
      </div>
    </div>
-   {!! $errors->first('service', '<small class="help-block" style="color: #dc3545" >:message</small>') !!}
+ </div>
+ </div> 
+
+ <div class="col-md-4 mb-3">
+  <div class="form-group {!! $errors->has('service') ? 'has-error' : '' !!}">
+     <label for="name">Type *</label>
+     <div class="form-field">
+       <div class="select-wrap">
+
+        <select name="preference" id="preference" class="custom-select">
+         <option value="">Choisir un type</option>
+         <option @if($service->type == "installation") selected = "selected" @endif value="installation">Installation</option>
+         <option @if($service->type == "depannage") selected = "selected" @endif value="depannage">Dépannage</option>
+      
+       </select>
+     </div>
+   </div>
+ </div> 
+</div>
+ <div class="col-md-4 mb-3">
+  <div class="form-group {!! $errors->has('service') ? 'has-error' : '' !!}">
+     <label for="name">Service *</label>
+     <div class="form-field">
+       <div class="select-wrap">
+
+        <select name="intervention" id="intervention" class="custom-select">
+         <option value="">Choisir l'intervention</option>
+
+         @foreach ($similarServices as $similarService) {
+         <option value=""> {{$similarService->titre}}</option>
+
+        }
+         @endforeach
+       
+
+
+
+
+       </select>
+     </div>
+   </div>
  </div> 
 </div>
 </div>
 
 <div class="form-row align-items-center">
- <div class="col-md-8 mb-3">
-  <label for="adresse">Adrrese *</label>
-  <div class="form-group {!! $errors->has('adresse') ? 'has-error' : '' !!}">
-    <input type="text" class="form-control" id="adresse" name="adresse" placeholder="Votre Adresse" >
-       {!! $errors->first('adresse', '<small class="help-block" style="color: #dc3545" >:message</small>') !!}
+     <div class="col-md-8 mb-3">
+      <label for="validationDefault02">Adrrese *</label>
+    <div class="form-group {!! $errors->has('categorie') ? 'has-error' : '' !!}">
+        
 
+      <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
+    </div>
+   
   </div>
-</div>
 
-<div class="col-md-4 mb-3">
-  <div class="form-group {!! $errors->has('région') ? 'has-error' : '' !!}">
-    <label for="région">Votre Région *</label>
-    <select name="région" id="région" class="custom-select">
-    <option value="">Votre Région</option>
-     <option value="Ariana">Ariana</option>
-     <option value="Ben Arous">Ben Arous</option>
-     <option value="Bardo">Bardo</option>
-     <option value="Manar">Manar</option>
-     <option value="Manazah">Manazah</option>
-     <option value="Marsa">Marsa</option>
-     <option value="Mourouj">Mourouj</option>
-     <option value="Les berges du lac">Les berges du lac</option>
-     <option value="Lafayette">Lafayette</option>
-     <option value="centre urban">centre urban </option>
-     <option value="Manouba">Manouba</option>
-     <option value="Tunis">Tunis</option>
-   </select>
-          {!! $errors->first('région', '<small class="help-block" style="color: #dc3545" >:message</small>') !!}
-
+     <div class="col-md-4 mb-3">
+    <div class="form-group {!! $errors->has('categorie') ? 'has-error' : '' !!}">
+        <label for="validationDefault02">Region *</label>
+        <select name="categorie" id="categorie" class="custom-select">
+         <option value="">Ariana</option>
+         <option value="">Ben Arous</option>
+         <option value="">Bardo</option>
+         <option value="">Manar</option>
+         <option value="">Manazah</option>
+         <option value="">Marsa</option>
+         <option value="">Mourouj</option>
+         <option value="">Les berges du lac</option>
+         <option value="">Lafayette</option>
+         <option value="">centre urban </option>
+         <option value="">Manouba</option>
+         <option value="">Tunis</option>
+       </select>
+  </div>
+ </div> 
  </div>
-</div> 
-</div>
+ <div class="form-row align-items-center">
+     <div class="col-md-8 mb-3">
+      <label for="validationDefault02">Adrrese *</label>
+    <div class="form-group {!! $errors->has('categorie') ? 'has-error' : '' !!}">
+        
 
-<div class="form-row align-items-center">
- <div class="col-md-8 mb-3">
-  <label for="date_intervention">Date de disponibilité *</label>
-  <div class="form-group {!! $errors->has('date_intervention') ? 'has-error' : '' !!}">
-
-
-    <input type="date" class="form-control" name="date_intervention" placeholder=""   >
-              {!! $errors->first('date_intervention', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
-
+      <input type="date" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
+    </div>
+   
   </div>
-
-</div>
-<div class="col-md-4 mb-3">
-  <div class="form-group {!! $errors->has('horaire') ? 'has-error' : '' !!}">
-    <label for="horaire">L'heure désirée*</label>
-    <select name="horaire" id="horaire" class="custom-select">
-     <option value="">Votre disponibilité</option>
-     <option value="8h à 9h30">8h à 9h30</option>
-     <option value="9h30 à 11h">9h30 à 11h</option>
-     <option value="11h à 12h30">11h à 12h30</option>
-     <option value="12h30 à 14h">12h30 à 14h</option>
-     <option value="14h à 15h30">14h à 15h30</option>
-     <option value="15h30 à 17h">15h30 à 17h</option>
-     <option value="17h à 18h30">17h à 18h30</option>
-     <option value="18h30 à 20h">18h30 à 20h</option>
-     <option value="20h à 21h30">20h à 21h30</option>
-     <option value="21h30 à 23h">21h30 à 23h</option>
-     <option value="autre">autre</option>
-   </select>
-    {!! $errors->first('horaire', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
- </div>
-</div> 
-</div>
-<br>
-<p><strong>Détails de contact:</strong></p>
-<div class="form-row align-items-center">
- <div class="col-md-6 mb-3">
-  <label for="name">Nom & Prénom *</label>
-  <div class="form-group {!! $errors->has('name') ? 'has-error' : '' !!}">
-
-
-    <input type="text" class="form-control" name="name" placeholder=" Votre Nom et Prénom " value="" >
-        {!! $errors->first('name', '<small class="help-block" style="color: #dc3545" >:message</small>') !!}
-
+   <div class="col-md-4 mb-3">
+    <div class="form-group {!! $errors->has('categorie') ? 'has-error' : '' !!}">
+        <label for="validationDefault02">L'heure *</label>
+        <select name="categorie" id="categorie" class="custom-select">
+         <option value="">8h à 9h30</option>
+         <option value="">9h30 à 11h</option>
+         <option value="">11h à 12h30</option>
+         <option value="">12h30 à 14h</option>
+         <option value="">14h à 15h30</option>
+         <option value="">15h30 à 17h</option>
+         <option value="">17h à 18h30</option>
+         <option value="">18h30 à 20h</option>
+         <option value="">20h à 21h30</option>
+         <option value="">21h30 à 23h</option>
+         <option value="">autre</option>
+       </select>
   </div>
-
+ </div> 
 </div>
 
-  <div class="col-md-6 mb-3">
-  <label for="phone">Numéro *</label>
-  <div class="form-group {!! $errors->has('phone') ? 'has-error' : '' !!}">
-    <input type="text" class="form-control" name="phone"  placeholder="Votre Numéo" value="" >
-            {!! $errors->first('phone', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" value="Passer la commande" class="btn py-3 px-4 btn-primary">
+                  </div>
 
-  </div>
-
-</div>
-  
-</div>
-<div class="form-group">
-    <label for="email">Email </label>
-  <div class="form-group {!! $errors->has('email') ? 'has-error' : '' !!}">
-    <input type="email" class="form-control" name="email" placeholder="Votre Email" value="" >
-    {!! $errors->first('email', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
-
-  </div>
-</div> 
-
-
-<div class="form-group">
-  <label for="description">Votre  Message</label>
-  <div class="form-group {!! $errors->has('description') ? 'has-error' : '' !!}">
-  <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
-   {!! $errors->first('description', '<small class="help-block" style="color: #dc3545" >:message</small>') !!}
-</div>
-</div>
-<!-- <div class="form-group">
-  <input type="submit" value="Passer la commande" class="btn py-3 px-4 btn-primary">
-</div>
-
-</form> -->
-   {!! Form::submit('Passez la demande', ['class' => 'btn btn-info pull-right']) !!}
-              {!! Form::close() !!}
+                </form>
 
 
 
@@ -716,96 +682,9 @@ textarea {
 </section>
 
 <!-- Footer include -->
-<!-- Footer -->
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-5">
-              <h2 class="ftco-heading-2 logo "><img src="../images/logo-white.png" alt="mon logo" style="width:180px" class="mr-3" />  </a></h2>
-              <p>DaryDar centralise tous les techniciens dans le secteur du bâtiment pour vous servir sur grand Tunis  .</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-            
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-5 ml-md-4">
-              <h2 class="ftco-heading-2">Services</h2>
-              <ul class="list-unstyled">
-                <li><a href="../services?categorie=electricite"><span class="ion-ios-arrow-round-forward mr-2"></span>Électricité</a></li>
-                <li><a href="../services?categorie=plomberie"><span class="ion-ios-arrow-round-forward mr-2"></span>Plomberie</a></li>
-                <li><a href="../services?categorie=climatisation"><span class="ion-ios-arrow-round-forward mr-2"></span>Climatisation</a></li>
-                <li><a href="../services?categorie=chauffage"><span class="ion-ios-arrow-round-forward mr-2"></span>Chauffage</a></li>
-               
-              </ul>
-            </div>
-          </div>
-
-          
-
-          <div class="col-md-5">
-            <div class="ftco-footer-widget mb-5">
-              <h2 class="ftco-heading-2"> Articles Recents</h2>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(../images/image_1.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Entretenir votre chaudière</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> Feb. 07, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="block-21 mb-5 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(../images/image_2.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Réglage optimale de votre climatiseur</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> Feb. 07, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-              
-     <div class="col-md">
-            <div class="ftco-footer-widget mb-5">
-              <h2 class="ftco-heading-2">Recevez nos nouvelles</h2>
-              
-
-     
-
-              
-              {!! Form::open(['route' => 'storeEmail']) !!}
-               <div class="form-group {!! $errors->has('mailing') ? 'has-error' : '' !!}">
-      {!! Form::text('mailing', null, ['class' => 'form-control', 'placeholder' => ' Votre Email']) !!}
-      {!! $errors->first('mailing', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
-    </div> 
-              {!! Form::submit('Envoyer !', ['class' => 'btn btn-info pull-right']) !!}
-              {!! Form::close() !!}
-
-
-
-            </div>
-        </div>
-     
-                <div class="row">
-          <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
-        </div>
-      </div>
-    </footer>
+<?php 
+include("includes/footer.php"); 
+?>
 
 
 
@@ -878,7 +757,7 @@ textarea {
 
   });
 </script> -->
-<!-- <script>
+<script>
 
 // SCRIPT MULTISTEPS 
 $(document).ready(function(){
@@ -1066,6 +945,6 @@ else
 });
  
 });
-</script> -->
+</script>
 
 

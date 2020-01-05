@@ -72,10 +72,10 @@
                   <div class="float-md-left mb-4">
                     <h2 class="text-black h5"> Nos services</h2>
                   </div>
-                  <div class="d-flex">
+       <!--            <div class="d-flex">
                     <div class="dropdown mr-1 ml-md-auto">
                       <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" id="dropdownMenuOffset"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                       Récent
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
@@ -85,7 +85,7 @@
                       <a class="dropdown-item" href="#">Chauffage</a>
                     </div>
                   </div>
-    <!--               <div class="btn-group">
+                  <div class="btn-group">
                     <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" id="dropdownMenuReference"
                     data-toggle="dropdown"> </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
@@ -96,8 +96,8 @@
                       <a class="dropdown-item" href="#">Price, low to high</a>
                       <a class="dropdown-item" href="#">Price, high to low</a>
                     </div>
-                  </div> -->
-                </div>
+                  </div>
+                </div> -->
               </div>
             </div>
 
@@ -162,6 +162,7 @@
       </div>
     </div>
   </div>
+  
 
 
   @endSection

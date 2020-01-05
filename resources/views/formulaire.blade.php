@@ -7,25 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
-  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
-  <link rel="stylesheet" href="../css/animate.css">
-  <link rel="stylesheet" href="../css/owl.carousel.min.css">
-  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="../css/magnific-popup.css">
-  <link rel="stylesheet" href="../css/aos.css">
-  <link rel="stylesheet" href="../css/ionicons.min.css">
-  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
-  <link rel="stylesheet" href="../css/jquery.timepicker.css">
-  <link rel="stylesheet" href="../css/flaticon.css">
-  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
 
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <!-- Personalised stylesheet: myStyle -->
-  <link rel="stylesheet" href="../css/myStyle.css">
+  <link rel="stylesheet" href="css/myStyle.css">
   <!--  -->
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6css/bootstrap.min.css" rel="stylesheet" />
  --><!-- style login-register -->
 
   <!-- <style>
@@ -229,7 +229,7 @@ textarea {
       <div class="row no-gutters d-flex align-items-center align-items-stretch">
         <div class="col-md-4 d-flex align-items-center py-4">
           <a class="navbar-brand" href="index.php">
-            <img src="../images/logo.png" alt="mon logo" style=width:40px /></a>
+            <img src="/images/logo.png" alt="mon logo" style=width:40px /></a>
           </div>  
           <div class="col-lg-8 d-block">
             <div class="row d-flex">
@@ -273,25 +273,25 @@ textarea {
 
       <div class="collapse navbar-collapse" id="ftco-nav">
        <ul class="navbar-nav mr-auto">
-        <li class="nav-item "><a href="../" class="nav-link pl-0">Acceuil</a></li>
-        <li class="nav-item active"><a href="../services" class="nav-link">Demandez une Intervention</a></li>
-<!--     <li class="nav-item"><a href="../about" class="nav-link">À Propos</a></li>
-    <li class="nav-item"><a href="../projects" class="nav-link">Projets</a></li>
-    <li class="nav-item"><a href="../blog" class="nav-link">Blog</a></li> -->
-    <li class="nav-item"><a href="../contact" class="nav-link">Contact</a></li>
+        <li class="nav-item "><a href="/" class="nav-link pl-0">Acceuil</a></li>
+        <li class="nav-item active"><a href="/services" class="nav-link">Demandez une Intervention</a></li>
+<!--     <li class="nav-item"><a href="/about" class="nav-link">À Propos</a></li>
+    <li class="nav-item"><a href="/projects" class="nav-link">Projets</a></li>
+    <li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li> -->
+    <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
   </ul>
 </div>
 
 </nav>
 <!-- END nav -->
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('../images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+<section class="hero-wrap hero-wrap-2" style="background-image: url('/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
   <div class="overlay"></div>
   <div class="container">
     <div class="row no-gutters slider-text align-items-center justify-content-center">
       <div class="col-md-9 ftco-animate text-center">
         <h1 class="mb-2 bread">Services</h1>
-        <p class="breadcrumbs"><span class="mr-2"><a href="../">Acceuil <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="../services">Services <i class="ion-ios-arrow-forward"></i></a></span> <span>{{$service->titre}} <i class="ion-ios-arrow-forward"></i></span></p>
+        <p class="breadcrumbs"><span class="mr-2"><a href="/">Acceuil <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="/services">Services <i class="ion-ios-arrow-forward"></i></a></span> <span>{{$service->titre}} <i class="ion-ios-arrow-forward"></i></span></p>
       </div>
     </div>
   </div>
@@ -304,7 +304,8 @@ textarea {
         <div class="comment-form-wrap pt-5">
           <h3 class="mb-5 h4 font-weight-bold text-center">Demandez une intervention en <span style="color:blue;">{{$service->categorie}}</span></h3>
 
-<!-- Formulaire de la Demande  -->
+
+<!-- form -->
               {!! Form::open(['route' => 'storeDemande']) !!}
    
 <!--           <form method="POST" action="{!! url('services') !!}" class="p-5 bg-light">
@@ -722,7 +723,7 @@ textarea {
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-5">
-              <h2 class="ftco-heading-2 logo "><img src="../images/logo-white.png" alt="mon logo" style="width:180px" class="mr-3" />  </a></h2>
+              <h2 class="ftco-heading-2 logo "><img src="images/logo-white.png" alt="mon logo" style="width:180px" class="mr-3" />  </a></h2>
               <p>DaryDar centralise tous les techniciens dans le secteur du bâtiment pour vous servir sur grand Tunis  .</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
@@ -736,10 +737,10 @@ textarea {
             <div class="ftco-footer-widget mb-5 ml-md-4">
               <h2 class="ftco-heading-2">Services</h2>
               <ul class="list-unstyled">
-                <li><a href="../services?categorie=electricite"><span class="ion-ios-arrow-round-forward mr-2"></span>Électricité</a></li>
-                <li><a href="../services?categorie=plomberie"><span class="ion-ios-arrow-round-forward mr-2"></span>Plomberie</a></li>
-                <li><a href="../services?categorie=climatisation"><span class="ion-ios-arrow-round-forward mr-2"></span>Climatisation</a></li>
-                <li><a href="../services?categorie=chauffage"><span class="ion-ios-arrow-round-forward mr-2"></span>Chauffage</a></li>
+                <li><a href="/services?categorie=electricite"><span class="ion-ios-arrow-round-forward mr-2"></span>Électricité</a></li>
+                <li><a href="/services?categorie=plomberie"><span class="ion-ios-arrow-round-forward mr-2"></span>Plomberie</a></li>
+                <li><a href="/services?categorie=climatisation"><span class="ion-ios-arrow-round-forward mr-2"></span>Climatisation</a></li>
+                <li><a href="/services?categorie=chauffage"><span class="ion-ios-arrow-round-forward mr-2"></span>Chauffage</a></li>
                
               </ul>
             </div>
@@ -751,7 +752,7 @@ textarea {
             <div class="ftco-footer-widget mb-5">
               <h2 class="ftco-heading-2"> Articles Recents</h2>
               <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(../images/image_1.jpg);"></a>
+                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
                 <div class="text">
                   <h3 class="heading"><a href="#">Entretenir votre chaudière</a></h3>
                   <div class="meta">
@@ -762,7 +763,7 @@ textarea {
                 </div>
               </div>
               <div class="block-21 mb-5 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(../images/image_2.jpg);"></a>
+                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
                 <div class="text">
                   <h3 class="heading"><a href="#">Réglage optimale de votre climatiseur</a></h3>
                   <div class="meta">
@@ -782,7 +783,6 @@ textarea {
 
      
 
-              
               {!! Form::open(['route' => 'storeEmail']) !!}
                <div class="form-group {!! $errors->has('mailing') ? 'has-error' : '' !!}">
       {!! Form::text('mailing', null, ['class' => 'form-control', 'placeholder' => ' Votre Email']) !!}
@@ -813,23 +813,23 @@ textarea {
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-<script src="../js/jquery.min.js"></script>
-<script src="../js/jquery-migrate-3.0.1.min.js"></script>
-<script src="../js/popper.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/jquery.easing.1.3.js"></script>
-<script src="../js/jquery.waypoints.min.js"></script>
-<script src="../js/jquery.stellar.min.js"></script>
-<script src="../js/owl.carousel.min.js"></script>
-<script src="../js/jquery.magnific-popup.min.js"></script>
-<script src="../js/aos.js"></script>
-<script src="../js/jquery.animateNumber.min.js"></script>
-<script src="../js/bootstrap-datepicker.js"></script>
-<script src="../js/jquery.timepicker.min.js"></script>
-<script src="../js/scrollax.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/scrollax.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="../js/google-map.js"></script>
-<script src="../js/main.js"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>

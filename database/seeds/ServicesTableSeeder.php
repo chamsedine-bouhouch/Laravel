@@ -24,7 +24,7 @@ class ServicesTableSeeder extends Seeder
 	        'updated_at' => date("Y-m-d H:i:s")
 	        ],
 	        [
-	        'titre' => 'Rparation Prise',
+	        'titre' => 'Réparation Prise',
 	        'categorie' => 'electricite',
 	        'type' => 'depannage',
 	        'description' => "Demander une nouvelle installation d'un prise",

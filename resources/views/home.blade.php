@@ -22,9 +22,9 @@
    <div class="container">
     <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
       <div class="col-md-6 text ftco-animate pl-md-5">
-        <h1 class="mb-4"> !تلوّج على فني صنايعي وثقة <span>Nos techniciens sont à votre sevice</span></h1>
-        <h3 class="subheading">Un réseau de plus de 300 techniciens validés</h3>
-        <p><a href="services" class="btn btn-secondary px-4 py-3 mt-3">Passer une demande</a></p>
+        <h1 class="mb-4 "> !تلوّج على فني صنايعي وثقة <span>Nos techniciens à votre service</span></h1>
+<!--         <h3 class="">Un réseau de plus de 300 techniciens validés</h3>
+ -->        <p><a href="services" class="btn btn-secondary px-4 py-3 mt-3">Demandez un technicien</a></p>
       </div>
     </div>
   </div>
@@ -37,7 +37,7 @@
     <div class="col-md-6 text ftco-animate pl-md-5">
       <h1 class="mb-4">!عندك مشكل محيرك وملقيتش الحل <span>le dépannage est notre expertise</span></h1>
       <h3 class="subheading"></h3>
-      <p><a href="services" class="btn btn-secondary px-4 py-3 mt-3">Passez une Demande</a></p>
+      <p><a href="services" class="btn btn-secondary px-4 py-3 mt-3">Diagnostiquez votre problème</a></p>
     </div>
   </div>
 </div>
@@ -67,31 +67,30 @@
       <h3>Récrutement Dépanneurs</h3>
     </div>
 
-    
               {!! Form::open(['route' => 'storePost']) !!}
                   <div class="form-group {!! $errors->has('name') ? 'has-error' : '' !!}">
       {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => ' Prénom Nom ']) !!}
-      {!! $errors->first('name', '<small class="help-block">:message</small>') !!}
+      {!! $errors->first('name', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
     </div>
     <div class="form-group {!! $errors->has('email') ? 'has-error' : '' !!}">
       {!! Form::text('email', null, ['class' => 'form-control', 'placeholder' => ' Votre Email']) !!}
-      {!! $errors->first('email', '<small class="help-block">:message</small>') !!}
+      {!! $errors->first('email', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
     </div>   
     <div class="form-group {!! $errors->has('phone') ? 'has-error' : '' !!}">
       {!! Form::text('phone', null, ['class' => 'form-control', 'placeholder' => ' Votre Numéro']) !!}
-      {!! $errors->first('phone', '<small class="help-block">:message</small>') !!}
+      {!! $errors->first('phone', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
     </div>
 
     <div class="form-group {!! $errors->has('spécialité') ? 'has-error' : '' !!}">
       {!! Form::text('spécialité', null, ['class' => 'form-control', 'placeholder' => ' Votre Spécialité']) !!}
-      {!! $errors->first('spécialité', '<small class="help-block">:message</small>') !!}
+      {!! $errors->first('spécialité', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
     </div>
 
   <div class="form-group {!! $errors->has('texte') ? 'has-error' : '' !!}">
     {!! Form::textarea ('texte', null, ['class' => 'form-control', 'placeholder' => ' Ajoutez un message']) !!}
-    {!! $errors->first('texte', '<small class="help-block">:message</small>') !!}
+    {!! $errors->first('texte', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
   </div >
-              {!! Form::submit('Postuler', ['class' => 'btn btn-info pull-right']) !!}
+              {!! Form::submit('Postulez', ['class' => 'btn btn-info pull-right']) !!}
               {!! Form::close() !!}
 
 </div>      
@@ -136,7 +135,32 @@
    <p class="mb-5"> Nous vous presontons une plateforme complete de mise en relation entre demandeurs de service et les prestataires, le client sera accompagné dés le debut par nos conseillers en finissant par un techncien hautement qualifié et disponible dans les brefs delais.</p>
    <!-- <p><a href="about" class="btn btn-secondary px-5 py-3">Lire plus</a></p> -->
  </div>
+ <br>
+ <br>
+<!--  <div class=" justify-content-center">
+   <div class="form-row">
+ <div class="col-md-4 mt-2">
+  
+  <div class="form-group  {!! $errors->has('adresse') ? 'has-error' : '' !!}">
+  
+    <input type="text" class="form-control" id="adresse" name="adresse" placeholder="Tapez votre Numéro" >
+       {!! $errors->first('adresse', '<small class="help-block" style="color: #dc3545" >:message</small>') !!}
+
+  </div>
 </div>
+
+<div class="col-md-3 mt-2 d-flex   justify-content-center">
+{!! Form::submit('Envoyer !', ['class' => 'btn btn-info']) !!}
+              {!! Form::close() !!}
+</div> 
+</div>
+ </div> -->
+ 
+</div>
+ 
+  
+
+
 </div>
 </div>
 </section>
@@ -159,13 +183,13 @@
     <div class="media block-6 d-block text-center">
       <div class="shadow p-3 mb-5 bg-white rounded">
         <div class="icon d-flex justify-content-center align-items-center">
-       <a href="services?categorie=electricite"><span style="color:#fe4a49"  class="flaticon-plug" ></span></a>
+       <a href="services?categorie=electricite"><span style="color:#4ad7d1 "  class="flaticon-plug" ></span></a>
      </div>
       </div>
       
      <div class="media-body p-2 mt-3">
       <h3 class="heading">Électricité</h3>
-      <p>On offre des prestations pour tous vos besoins en électricité.</p>
+      <p>Nos dépanneurs sont là pour vous offrir des prestations pour tous vos besoins en électricité.</p>
     </div>
   </div>      
 </div>
@@ -173,12 +197,12 @@
   <div class="media block-6 d-block text-center">
      <div class="shadow p-3 mb-5 bg-white rounded">
     <div class="icon d-flex justify-content-center align-items-center">
-      <a href="services?categorie=plomberie"><span style="color:#fe4a49" class="flaticon-pipe"></span></a>
+      <a href="services?categorie=plomberie"><span style="color:#4ad7d1 " class="flaticon-pipe"></span></a>
     </div>
 </div>
     <div class="media-body p-2 mt-3">
       <h3 class="heading">Plomberie</h3>
-      <p>Nos dépanneur sont à votre disposition pour toutes pannes et installations en plomberie.</p>
+      <p>Nos dépanneurs sont à votre disposition pour toutes pannes et installations en plomberie.</p>
     </div>
   </div>    
 </div>
@@ -186,12 +210,12 @@
   <div class="media block-6 d-block text-center">
      <div class="shadow p-3 mb-5 bg-white rounded">
     <div class="icon d-flex justify-content-center align-items-center">
-      <a href="services?categorie=climatisation"><span style="color:#fe4a49" class="flaticon-air-conditioner"></span></a>
+      <a href="services?categorie=climatisation"><span style="color:#4ad7d1 " class="flaticon-air-conditioner"></span></a>
     </div>
 </div>
     <div class="media-body p-2 mt-3">
       <h3 class="heading">Climatisation</h3>
-      <p>Entretenir votre climatiseur ou demandez une nouvelle installation.</p>
+      <p>Nos dépanneurs sont là pour entretenir votre climatiseur ou mettre en place une nouvelle installation.</p>
     </div>
   </div>    
 </div>
@@ -199,12 +223,12 @@
   <div class="media block-6 d-block text-center">
      <div class="shadow p-3 mb-5 bg-white rounded">
     <div class="icon d-flex justify-content-center align-items-center">
-      <a href="services?categorie=chauffage"><span style="color:#fe4a49" class="flaticon-heater"></span></a>
+      <a href="services?categorie=chauffage"><span style="color:#4ad7d1 " class="flaticon-heater"></span></a>
     </div>
 </div>
     <div class="media-body p-2 mt-3">
       <h3 class="heading">Chauffage</h3>
-      <p>Entretenir votre chaudière ou demandez une nouvelle installation.</p>
+      <p>Nos dépanneurs sont à votre disposition pour entretenir votre chaudière ou mettre en place une nouvelle installation.</p>
     </div>
   </div>      
 </div>
@@ -215,7 +239,7 @@
 <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
           <div class="col-md-8 text-center heading-section ftco-animate">
-            <span class="subheading"></span>
+            <span class="subheading"> Qualité de service</span>
             
              <h2 class="mb-4">La qualité de service est notre priorité</h2>
           </div>
@@ -224,44 +248,46 @@
           <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
             <div class="media block-6 d-block text-center">
               <div class="icon d-flex justify-content-center align-items-center">
-                <img src="img/icon/stopwatch.png" alt="">>
+                <img src="img/icon/001-stopwatch.png" alt="">>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Disponible </br> 24/7 </h3>
-                <p>Notre réseau de techniciens est dispatché sur le grand Tunis et sont disponible meme pendant des heures tardives.</p>
+                <h3 class="heading">Disponible </br> 7/7 </h3>
+                <p>Notre réseau de techniciens compétents est dispatché sur le grand Tunis. Ils sont disponibles même pendant des heures tardives.</p>
               </div>
             </div>      
           </div>
           <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
             <div class="media block-6 d-block text-center">
               <div class="icon d-flex justify-content-center align-items-center">
-                <img src="img/icon/diploma.png" alt="">
+                <img src="img/icon/002-award.png" alt="">
               </div>
               <div class="media-body p-2 mt-3">
                 <h3 class="heading">Service de qualité</h3>
-                <p>Nos techniciens sont bien sélectionner pour vous offrir la meilleur prestation.</p>
+                <p>Nos techniciens sont sélectionnés et testés par DaryDar pour vous offrir la meilleure prestation.</p>
               </div>
             </div>    
           </div>
           <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
             <div class="media block-6 d-block text-center">
               <div class="icon d-flex justify-content-center align-items-center">
-                <img src="img/icon/shield.png" alt="">
+                <img src="img/icon/005-shield.png" alt="">
               </div>
               <div class="media-body p-2 mt-3">
                 <h3 class="heading">Garantie assuré</h3>
-                <p>Allo Service offre une garantie sur les interventions et un service de suivi à la hauteur de vos attentes.</p>
+                <p>Darydar vous offre une garantie sur les interventions et un service de suivi à la hauteur de vos attentes.</p>
               </div>
             </div>    
           </div>
           <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
             <div class="media block-6 d-block text-center">
               <div class="icon d-flex justify-content-center align-items-center">
-                <img src="img/icon/money-bag.png" alt="">
+                <img src="img/icon/004-save-money.png" alt="">
               </div>
               <div class="media-body p-2 mt-3">
                 <h3 class="heading">Transparence de prix</h3>
-                <p>Plus de surprise sur les prix DaryDar travail avec une grille tarifaire avec tous les techniciens.</p>
+                <p>Plus de surprises sur les prix avec DaryDar ! Nous vous proposons une grille tarifaire selon votre besoin en réparation/installation*.<br>
+<!-- <small>*(Dans le cas où le problème que vous rencontrez nécessite un travail plus en profondeur, un devis vous sera proposez sur place)</small>  -->
+.</p>
               </div>
             </div>      
           </div>
@@ -271,22 +297,40 @@
 <!-- End  services -->
 
 
-<!--     <section class="ftco-intro" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
-     <div class="overlay"></div>
+    <section class="ftco-intro " style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+     <div class=""></div>
      <div class="container">
-      <div class="row ">
-       <div class="col-md-6 text-center">
-        <h2>Pour faciliter votre dépannage</h2>
-        <p>DaryDar met à votre disposition des prosfessionels de qualité dans votre zone</p>
-        <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3"> Mieux nous connaître</a></p>
-      </div>
-             <div class="col-md-6 text-center">
-             <img src="images/work-1.jpg" class="img-fluid"  alt="Colorlib Template">
-                          </div>
+      <div class="row d-flex  ">
+       <div class="col-md-8  d-flex text-center" >
+        <h2 style="color:  #001730">Demandez d'être Appeler</h2>
+        <!-- <p>DaryDar met à votre disposition des prosfessionels de qualité dans votre zone</p> -->
+        </div>
+        
+  
+    </div>
+    {!! Form::open(['route' => 'storeEmail']) !!}
+    <div class="form-row align-items-center d-flex ">
+ <div class="col-md-4 mt-2">
+  
+  <div class="form-group  {!! $errors->has('tel') ? 'has-error' : '' !!}">
+   
+    <input type="text" class="form-control" id="tel" name="tel" placeholder="Tapez votre Numéro" >
+       {!! $errors->first('tel', '<small class="help-block" style="color: #dc3545" >:message</small>') !!}
+
+  </div>
+</div>
+
+<div class="col-md-3 mt-2 d-flex   justify-content-center">
+{!! Form::submit('Rappelez moi !', ['class' => 'btn btn-secondary btn-lg ']) !!}
+              {!! Form::close() !!}
+</div> 
+</div>
+
+             
 
     </div>
-  </div>
-</section> -->
+</section>
+
 
 
 
@@ -303,8 +347,8 @@
      <p>Une équipe jeune et passionnée avec des expert dans tous les domaines de dépannages.</p>
    </div>
  </div>	
- <div class="row">
-   <div class="col-md-6 col-lg-3 ftco-animate">
+ <div class="row d-flex justify-content-center">
+   <div class="col-md-6 col-lg-4 ftco-animate">
     <div class="staff">
      <div class="img-wrap d-flex align-items-stretch">
       <div class="img align-self-stretch" style="background-image: url(images/taha.jpg);"></div>
@@ -316,15 +360,15 @@
        <!-- <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p> -->
        <ul class="ftco-social text-center">
         <!-- <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li> -->
-        <li class="ftco-animate"><a href="https://www.facebook.com/tahaa.khaleed"><span class="icon-facebook"></span></a></li>
-        <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+        <li class="ftco-animate"><a href="https://www.facebook.com/tahaa.khaleed"  rel="noopener noreferrer" target="_blank"><span class="icon-facebook"></span></a></li>
+        <li class="ftco-animate"><a href="mailto:tahakhaled994@gmail.com"  rel="noopener noreferrer" target="_blank"><span class="icon-google-plus"></span></a></li>
         <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
       </ul>
     </div>
   </div>
 </div>
 </div>
-<div class="col-md-6 col-lg-3 ftco-animate">
+<div class="col-md-6 col-lg-4 ftco-animate">
   <div class="staff">
    <div class="img-wrap d-flex align-items-stretch">
     <div class="img align-self-stretch" style="background-image: url(images/chams.jpg);"></div>
@@ -336,15 +380,15 @@
      <!-- <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p> -->
      <ul class="ftco-social text-center">
      <!--  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li> -->
-      <li class="ftco-animate"><a href="https://www.facebook.com/chamseddine.bouhouch"><span class="icon-facebook"></span></a></li>
-      <li class="ftco-animate"><a href="bouhouchchamseddine@gmail.com"><span class="icon-google-plus"></span></a></li>
+      <li class="ftco-animate"><a href="https://www.facebook.com/chamseddine.bouhouch"  rel="noopener noreferrer" target="_blank"><span class="icon-facebook"></span></a></li>
+      <li class="ftco-animate"><a href="mailto:bouhouchchamseddine@gmail.com" ><span class="icon-google-plus"></span></a></li>
       <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
     </ul>
   </div>
 </div>
 </div>
 </div>
-<div class="col-md-6 col-lg-3 ftco-animate">
+<div class="col-md-6 col-lg-4 ftco-animate">
   <div class="staff">
    <div class="img-wrap d-flex align-items-stretch">
     <div class="img align-self-stretch" style="background-image: url(images/wiem.jpg);"></div>
@@ -364,7 +408,7 @@
 </div>
 </div>
 </div>
-<div class="col-md-6 col-lg-3 ftco-animate">
+<!-- <div class="col-md-6 col-lg-3 ftco-animate">
   <div class="staff">
    <div class="img-wrap d-flex align-items-stretch">
     <div class="img align-self-stretch" style="background-image: url(images/team-4.jpg);"></div>
@@ -373,7 +417,7 @@
     <h3>Naceur</h3>
     <span class="position mb-2">Electricien</span>
     <div class="faded">
-     <!-- <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p> -->
+     <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
      <ul class="ftco-social text-center">
       <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
       <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -383,7 +427,7 @@
   </div>
 </div>
 </div>
-</div>
+</div> -->
 </div>
 </div>
 </section>
@@ -498,39 +542,39 @@
 </div>
 </section> -->
 <section class="ftco-counter img" id="section-counter" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
- <div class="container">
-  <div class="row">
-    <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+ <div class="container ">
+  <div class="row ">
+    <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
       <div class="block-18 d-flex">
         <div class="text d-flex align-items-center">
-          <strong class="number" data-number="30">0</strong>
+          <strong class="number" >2018</strong>
         </div>
         <div class="text-2">
-         <span>Years of <br>Experienced</span>
+         <span>Année <br> de Création</span>
        </div>
      </div>
    </div>
-   <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+   <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
     <div class="block-18 d-flex">
       <div class="text d-flex align-items-center">
-        <strong class="number" data-number="1500">0</strong>
+        <strong class="number" data-number="25">0</strong>
       </div>
       <div class="text-2">
-       <span>Project <br>Successful</span>
+       <span>Techniciens <br> Disponibles</span>
      </div>
    </div>
  </div>
- <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+ <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
   <div class="block-18 d-flex">
     <div class="text d-flex align-items-center">
-      <strong class="number" data-number="100">0</strong>
+      <strong class="number" data-number="20">0</strong>
     </div>
     <div class="text-2">
-     <span>Professional <br>Expert</span>
+     <span>Zones   <br>Desservies</span>
    </div>
  </div>
 </div>
-<div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+<!-- <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
   <div class="block-18 d-flex">
     <div class="text d-flex align-items-center">
       <strong class="number" data-number="300">0</strong>
@@ -539,7 +583,7 @@
      <span>Happy <br>Customers</span>
    </div>
  </div>
-</div>
+</div> -->
 </div>
 </div>
 </section>
@@ -560,7 +604,7 @@
        </div>
        <div class="text">
          <h3>Expert &amp; Professional</h3>
-         <p>Separated they live in. A small river named Duden flows</p>
+         <p>Nos techniciens sont sélectionnés pour vous offrir la meilleure prestation.</p>
        </div>
      </div>
      <div class="services-2 p-4 d-flex ftco-animate">
@@ -569,7 +613,7 @@
      </div>
      <div class="text">
        <h3>Service Après Vente</h3>
-       <p>Separated they live in. A small river named Duden flows</p>
+       <p>Darydar vous propose un grantie de ces interventions</p>
      </div>
    </div>
    <div class="services-2 p-4 d-flex ftco-animate">
@@ -577,18 +621,19 @@
      <span class="flaticon-engineer-2"></span>
    </div>
    <div class="text">
-     <h3>24/7 Assistance Client</h3>
-     <p>Separated they live in. A small river named Duden flows</p>
+     <h3>7/7 Assistance Client</h3>
+     <p>Nous sommes à votre disposition toute la semaine</p>
    </div>
  </div>
 </div>
 </div>
+
 <div class="col-xl-1 d-xl-block d-none"></div>
 <div class="col-md-6 col-lg-6 col-xl-7">
  <div class="heading-section ftco-animate mb-5">
   <span class="subheading"> Témoignage</span>
   <h2 class="mb-4">Clients Satisfaits</h2>
-  <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+  <p>Les témoignages de nos clients</p>
 </div>
 <div class="carousel-testimony owl-carousel">
   <div class="item">
@@ -597,11 +642,11 @@
        <span class="quote d-flex align-items-center justify-content-center">
         <i class="icon-quote-left"></i>
       </span>
-      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-      <p class="name">Racky Henderson</p>
-      <span class="position">Farmer</span>
+      <p> Merci Darydar pour la qualité de service que j’ai eu, pour votre disponibilité et votre patience à toute preuve. Je recommande ! </p>
+      <p class="name">Menel.A</p>
+      <span class="position">Consultante</span>
     </div>
-    <div class="user-img" style="background-image: url(images/person_1.jpg)">
+    <div class="user-img" style="background-image: url()">
     </div>
   </div>
 </div>
@@ -611,11 +656,11 @@
      <span class="quote d-flex align-items-center justify-content-center">
       <i class="icon-quote-left"></i>
     </span>
-    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-    <p class="name">Henry Dee</p>
-    <span class="position">Businessman</span>
+    <p> Service de qualité exceptionnelle, technicien compétent. Mon problème a été résolu en moins d’une heure. </p>
+    <p class="name">Mehrez</p>
+    <span class="position">commerçant</span>
   </div>
-  <div class="user-img" style="background-image: url(images/person_2.jpg)">
+  <div class="user-img" style="background-image: url()">
   </div>
 </div>
 </div>
@@ -625,15 +670,15 @@
      <span class="quote d-flex align-items-center justify-content-center">
       <i class="icon-quote-left"></i>
     </span>
-    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-    <p class="name">Mark Huff</p>
-    <span class="position">Students</span>
+    <p>J’ai adoré le devis en ligne, c’est nouveau en Tunisie et ça permet d’éviter les mauvaises surprises. </p>
+    <p class="name">Mourad</p>
+    <span class="position">Prof </span>
   </div>
-  <div class="user-img" style="background-image: url(images/person_3.jpg)">
+  <div class="user-img" style="background-image: url()">
   </div>
 </div>
 </div>
-<div class="item">
+<!-- <div class="item">
   <div class="testimony-wrap">
     <div class="text bg-light p-4">
      <span class="quote d-flex align-items-center justify-content-center">
@@ -646,18 +691,18 @@
   <div class="user-img" style="background-image: url(images/person_4.jpg)">
   </div>
 </div>
-</div>
+</div> -->
 <div class="item">
   <div class="testimony-wrap">
     <div class="text bg-light p-4">
      <span class="quote d-flex align-items-center justify-content-center">
       <i class="icon-quote-left"></i>
     </span>
-    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-    <p class="name">Ken Bosh</p>
+    <p> Le technicien est venu à 21H pour réparer une fuite d’eau ! Il m’a sauvé la vie.</p>
+    <p class="name">Oussama</p>
     <span class="position">Manager</span>
   </div>
-  <div class="user-img" style="background-image: url(images/person_1.jpg)">
+  <div class="user-img" style="background-image: url()">
   </div>
 </div>
 </div>
@@ -746,6 +791,8 @@
 </div>
 </div>
 </section> -->
+
+
 @endsection
 
 

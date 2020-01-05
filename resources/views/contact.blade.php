@@ -33,21 +33,21 @@
 						{!! Form::open(['url' => 'contact']) !!}
           <div class="form-group {!! $errors->has('nom') ? 'has-error' : '' !!}">
             {!! Form::text('nom', null, ['class' => 'form-control', 'placeholder' => 'Votre nom']) !!}
-            {!! $errors->first('nom', '<small class="help-block">:message</small>') !!}
+            {!! $errors->first('nom', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
           </div>
           <div class="form-group {!! $errors->has('numero') ? 'has-error' : '' !!}">
             {!! Form::text('prenom', null, ['class' => 'form-control', 'placeholder' => 'Votre Prenom']) !!}
-            {!! $errors->first('prenom', '<small class="help-block">:message</small>') !!}
+            {!! $errors->first('prenom', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
           </div>
           <div class="form-group {!! $errors->has('email') ? 'has-error' : '' !!}">
             {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Votre email']) !!}
-            {!! $errors->first('email', '<small class="help-block">:message</small>') !!}
+            {!! $errors->first('email', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
           </div>
 
 
           <div class="form-group {!! $errors->has('texte') ? 'has-error' : '' !!}">
             {!! Form::textarea ('texte', null, ['class' => 'form-control', 'placeholder' => 'Votre message']) !!}
-            {!! $errors->first('texte', '<small class="help-block">:message</small>') !!}
+            {!! $errors->first('texte', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
           </div>
           {!! Form::submit('Envoyer !', ['class' => 'btn btn-info pull-right']) !!}
         {!! Form::close() !!}
@@ -68,22 +68,22 @@
           <div class="w-100"></div>
           <div class="col-md-3 d-flex">
           	<div class="bg-light d-flex align-self-stretch box p-4">
-	            <p><span>Addresse:</span> Av. de la Liberté, la Marsa 2078, TUNIS</p>
+	            <p><span>Addresse:</span> <br> La Marsa 2078, TUNIS</p>
 	          </div>
           </div>
           <div class="col-md-3 d-flex">
           	<div class="bg-light d-flex align-self-stretch box p-4">
-	            <p><span>Phone:</span> <a href="tel://1234567920">52 369 586</a></p>
+	            <p><span>Phone:</span> <br><a href="tel://+21652369589"> +216 52 369 586</a></p>
 	          </div>
           </div>
           <div class="col-md-3 d-flex">
           	<div class="bg-light d-flex align-self-stretch box p-4">
-	            <p><span>Email:</span> <a href="mailto:info@yoursite.com">allooservice@gmail.com</a></p>
+	            <p><span>Email:</span> <a href="mailto:contact.darydar@gmail.com">contact.darydar@gmail.com</a></p>
 	          </div>
           </div>
           <div class="col-md-3 d-flex">
           	<div class="bg-light d-flex align-self-stretch box p-4">
-	            <p><span>Siteweb:</span> <a href="#">allooservice.tn</a></p>
+	            <p><span>Siteweb:</span> <br><a href="./">www.darydar.tech</a></p>
 	          </div>
           </div>
         </div>

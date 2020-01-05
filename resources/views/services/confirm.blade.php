@@ -304,7 +304,8 @@ textarea {
         <div class="comment-form-wrap pt-5">
           <h3 class="mb-5 h4 font-weight-bold text-center">Demandez une intervention en <span style="color:blue;">{{$service->categorie}}</span></h3>
 
-<!-- Formulaire de la Demande  -->
+
+<!-- form -->  <h3>Votre demande est bien enregister, Nous vous contactons le plus tot possible </h3>
               {!! Form::open(['route' => 'storeDemande']) !!}
    
 <!--           <form method="POST" action="{!! url('services') !!}" class="p-5 bg-light">
@@ -325,7 +326,6 @@ textarea {
                  </select>
                </div>
              </div>
-             {!! $errors->first('catégorie', '<small class="help-block" style="color: #dc3545"  style="color: #dc3545">:message</small>') !!}
            </div>
          </div> 
 
@@ -358,7 +358,6 @@ textarea {
        </select>
      </div>
    </div>
-   {!! $errors->first('service', '<small class="help-block" style="color: #dc3545" >:message</small>') !!}
  </div> 
 </div>
 </div>
@@ -368,8 +367,6 @@ textarea {
   <label for="adresse">Adrrese *</label>
   <div class="form-group {!! $errors->has('adresse') ? 'has-error' : '' !!}">
     <input type="text" class="form-control" id="adresse" name="adresse" placeholder="Votre Adresse" >
-       {!! $errors->first('adresse', '<small class="help-block" style="color: #dc3545" >:message</small>') !!}
-
   </div>
 </div>
 
@@ -377,7 +374,6 @@ textarea {
   <div class="form-group {!! $errors->has('région') ? 'has-error' : '' !!}">
     <label for="région">Votre Région *</label>
     <select name="région" id="région" class="custom-select">
-    <option value="">Votre Région</option>
      <option value="Ariana">Ariana</option>
      <option value="Ben Arous">Ben Arous</option>
      <option value="Bardo">Bardo</option>
@@ -391,8 +387,6 @@ textarea {
      <option value="Manouba">Manouba</option>
      <option value="Tunis">Tunis</option>
    </select>
-          {!! $errors->first('région', '<small class="help-block" style="color: #dc3545" >:message</small>') !!}
-
  </div>
 </div> 
 </div>
@@ -403,9 +397,7 @@ textarea {
   <div class="form-group {!! $errors->has('date_intervention') ? 'has-error' : '' !!}">
 
 
-    <input type="date" class="form-control" name="date_intervention" placeholder=""   >
-              {!! $errors->first('date_intervention', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
-
+    <input type="date" class="form-control" name="date_intervention" placeholder=""   required>
   </div>
 
 </div>
@@ -413,7 +405,6 @@ textarea {
   <div class="form-group {!! $errors->has('horaire') ? 'has-error' : '' !!}">
     <label for="horaire">L'heure désirée*</label>
     <select name="horaire" id="horaire" class="custom-select">
-     <option value="">Votre disponibilité</option>
      <option value="8h à 9h30">8h à 9h30</option>
      <option value="9h30 à 11h">9h30 à 11h</option>
      <option value="11h à 12h30">11h à 12h30</option>
@@ -426,7 +417,6 @@ textarea {
      <option value="21h30 à 23h">21h30 à 23h</option>
      <option value="autre">autre</option>
    </select>
-    {!! $errors->first('horaire', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
  </div>
 </div> 
 </div>
@@ -438,9 +428,7 @@ textarea {
   <div class="form-group {!! $errors->has('name') ? 'has-error' : '' !!}">
 
 
-    <input type="text" class="form-control" name="name" placeholder=" Votre Nom et Prénom " value="" >
-        {!! $errors->first('name', '<small class="help-block" style="color: #dc3545" >:message</small>') !!}
-
+    <input type="text" class="form-control" name="name" placeholder=" Votre Nom et Prénom " value="" required>
   </div>
 
 </div>
@@ -448,9 +436,7 @@ textarea {
   <div class="col-md-6 mb-3">
   <label for="phone">Numéro *</label>
   <div class="form-group {!! $errors->has('phone') ? 'has-error' : '' !!}">
-    <input type="text" class="form-control" name="phone"  placeholder="Votre Numéo" value="" >
-            {!! $errors->first('phone', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
-
+    <input type="text" class="form-control" name="phone"  placeholder="Votre Numéo" value="" required>
   </div>
 
 </div>
@@ -458,27 +444,22 @@ textarea {
 </div>
 <div class="form-group">
     <label for="email">Email </label>
-  <div class="form-group {!! $errors->has('email') ? 'has-error' : '' !!}">
-    <input type="email" class="form-control" name="email" placeholder="Votre Email" value="" >
-    {!! $errors->first('email', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
-
+  <div class="form-group {!! $errors->has('categorie') ? 'has-error' : '' !!}">
+    <input type="email" class="form-control" name="email" placeholder="Votre Email" value="" required>
   </div>
 </div> 
 
 
 <div class="form-group">
   <label for="description">Votre  Message</label>
-  <div class="form-group {!! $errors->has('description') ? 'has-error' : '' !!}">
   <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
-   {!! $errors->first('description', '<small class="help-block" style="color: #dc3545" >:message</small>') !!}
-</div>
 </div>
 <!-- <div class="form-group">
   <input type="submit" value="Passer la commande" class="btn py-3 px-4 btn-primary">
 </div>
 
 </form> -->
-   {!! Form::submit('Passez la demande', ['class' => 'btn btn-info pull-right']) !!}
+   {!! Form::submit('submit', ['class' => 'btn btn-info pull-right']) !!}
               {!! Form::close() !!}
 
 
@@ -716,96 +697,9 @@ textarea {
 </section>
 
 <!-- Footer include -->
-<!-- Footer -->
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-5">
-              <h2 class="ftco-heading-2 logo "><img src="../images/logo-white.png" alt="mon logo" style="width:180px" class="mr-3" />  </a></h2>
-              <p>DaryDar centralise tous les techniciens dans le secteur du bâtiment pour vous servir sur grand Tunis  .</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-            
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-5 ml-md-4">
-              <h2 class="ftco-heading-2">Services</h2>
-              <ul class="list-unstyled">
-                <li><a href="../services?categorie=electricite"><span class="ion-ios-arrow-round-forward mr-2"></span>Électricité</a></li>
-                <li><a href="../services?categorie=plomberie"><span class="ion-ios-arrow-round-forward mr-2"></span>Plomberie</a></li>
-                <li><a href="../services?categorie=climatisation"><span class="ion-ios-arrow-round-forward mr-2"></span>Climatisation</a></li>
-                <li><a href="../services?categorie=chauffage"><span class="ion-ios-arrow-round-forward mr-2"></span>Chauffage</a></li>
-               
-              </ul>
-            </div>
-          </div>
-
-          
-
-          <div class="col-md-5">
-            <div class="ftco-footer-widget mb-5">
-              <h2 class="ftco-heading-2"> Articles Recents</h2>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(../images/image_1.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Entretenir votre chaudière</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> Feb. 07, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="block-21 mb-5 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(../images/image_2.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Réglage optimale de votre climatiseur</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> Feb. 07, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-              
-     <div class="col-md">
-            <div class="ftco-footer-widget mb-5">
-              <h2 class="ftco-heading-2">Recevez nos nouvelles</h2>
-              
-
-     
-
-              
-              {!! Form::open(['route' => 'storeEmail']) !!}
-               <div class="form-group {!! $errors->has('mailing') ? 'has-error' : '' !!}">
-      {!! Form::text('mailing', null, ['class' => 'form-control', 'placeholder' => ' Votre Email']) !!}
-      {!! $errors->first('mailing', '<small class="help-block" style="color: #dc3545">:message</small>') !!}
-    </div> 
-              {!! Form::submit('Envoyer !', ['class' => 'btn btn-info pull-right']) !!}
-              {!! Form::close() !!}
-
-
-
-            </div>
-        </div>
-     
-                <div class="row">
-          <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
-        </div>
-      </div>
-    </footer>
+<?php 
+include("includes/footer.php"); 
+?>
 
 
 

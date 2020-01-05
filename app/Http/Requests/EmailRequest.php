@@ -23,6 +23,6 @@ class EmailRequest extends FormRequest
      */
     public function rules()
     {
-        return ['email' => 'required|email|unique:newsletters'];
+        return ['mailing' => 'required|email|unique:newsletters'];
     }
 }
