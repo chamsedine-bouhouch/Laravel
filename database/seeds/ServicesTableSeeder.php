@@ -19,7 +19,7 @@ class ServicesTableSeeder extends Seeder
 	        'type' => 'installation',
 	        'description' => "Demander une nouvelle installation d'un prise",
 	        'prix' => 30,
-	        'image' => 'réparationPrise.jpg',
+	        'image' => 'reparationPrise.jpg',
 	        'created_at' => date("Y-m-d H:i:s"),
 	        'updated_at' => date("Y-m-d H:i:s")
 	        ],
@@ -29,7 +29,7 @@ class ServicesTableSeeder extends Seeder
 	        'type' => 'depannage',
 	        'description' => "Demander une nouvelle installation d'un prise",
 	        'prix' => 20,
-	        'image' => 'réparationPrise.jpg',
+	        'image' => 'reparationPrise.jpg',
 	        'created_at' => date("Y-m-d H:i:s"),
 	        'updated_at' => date("Y-m-d H:i:s")
 	        ],

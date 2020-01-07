@@ -20,13 +20,14 @@ Route::resource('services', 'ServicesController');
 
 Route::post('services.show', 'DemandesController@post')->name('storeDemande');
 
-Route::get('contact', 'ContactController@getForm');
+Route::get('contact', 'ContactController@getForm')->name('contact');
 Route::post('contact', 'ContactController@postForm');
 
-Route::get('/', 'EmailController@getForm')->name('acceuil');
+Route::get('/', 'EmailController@getForm')->name('home');
 Route::post('/newsletters',  'EmailController@postForm')->name('storeEmail');
 
 Route::post('/candidatez', 'EmailController@techForm')->name('storePost');
+Route::post('/Rappelez', 'EmailController@phone')->name('storePhone');
 
 
 // Route::get('/connect', function () {

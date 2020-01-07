@@ -25,7 +25,7 @@ class ContactController extends Controller {
 		// 	$message->to('bouhouchchamseddine@gmail.com')->subject('Contact AllooSerice');
 		// });
 
-		return view('contact.confirm');
+		return redirect()->route('contact')->with('success','Votre mesage est bien réçu');
 	}
 
 }

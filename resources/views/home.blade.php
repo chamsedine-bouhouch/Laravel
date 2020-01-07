@@ -20,6 +20,7 @@
   <div class="slider-item" style="background-image:url(images/bg_1.jpg);" data-stellar-background-ratio="0.5">
    <div class="overlay"></div>
    <div class="container">
+    
     <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
       <div class="col-md-6 text ftco-animate pl-md-5">
         <h1 class="mb-4 "> !تلوّج على فني صنايعي وثقة <span>Nos techniciens à votre service</span></h1>
@@ -128,6 +129,11 @@
 
 
 <div class="col-md-8 wrap-about py-5 ftco-animate">
+   @if ($message = Session::get('success'))
+ <div class="alert alert-success">
+   <p> {{ $message }} </p>
+ </div>
+  @endif
  <div class="heading-section mb-5">
    <h2 class="mb-4">DaryDar réunit tous les dépanneurs du bâtiment </h2>
  </div>
@@ -300,35 +306,57 @@
     <section class="ftco-intro " style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
      <div class=""></div>
      <div class="container">
-      <div class="row d-flex  ">
-       <div class="col-md-8  d-flex text-center" >
+      <div class="row d-flex justify-content-center ">
+       <div class="col-10  d-flex text-center" >
         <h2 style="color:  #001730">Demandez d'être Appeler</h2>
         <!-- <p>DaryDar met à votre disposition des prosfessionels de qualité dans votre zone</p> -->
         </div>
         
   
     </div>
-    {!! Form::open(['route' => 'storeEmail']) !!}
-    <div class="form-row align-items-center d-flex ">
- <div class="col-md-4 mt-2">
-  
-  <div class="form-group  {!! $errors->has('tel') ? 'has-error' : '' !!}">
-   
-    <input type="text" class="form-control" id="tel" name="tel" placeholder="Tapez votre Numéro" >
-       {!! $errors->first('tel', '<small class="help-block" style="color: #dc3545" >:message</small>') !!}
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        {!! Form::open(['route' => 'storePhone']) !!}
+    <div class="form-row align-items-stretch d-flex">
+<!--  <div class="col-md-4 mt-2">
+   <div class="input-group mb-2 mr-sm-2">
+     <div class="form-group {!! $errors->has('mailing') ? 'has-error' : '' !!}">
+      <div class="input-group-prepend">
+      <div class="input-group-text">@</div>
+    </div>
+      {!! Form::text('mailing', null, ['class' => 'form-control', 'placeholder' => ' Votre Email']) !!}
+      {!! $errors->first('mailing', '<small class="help-block"  style="color: #dc3545">:message</small>') !!}
+    </div>  
+</div>
+          <div class="form-group {!! $errors->has('mailing') ? 'has-error' : '' !!}">
+      {!! Form::text('mailing', null, ['class' => 'form-control', 'placeholder' => ' Votre Email']) !!}
+      {!! $errors->first('mailing', '<small class="help-block"  style="color: #dc3545">:message</small>') !!}
+    </div> 
+</div> -->
+<div class="col-md-4 mt-3 text-center">
+      
+      <div class="input-group mb-2 {!! $errors->has('number') ? 'has-error' : '' !!}">
+        <div class="input-group-prepend">
+          <div class="input-group-text">+216</div>
+        </div>
+         {!! Form::number('number', null, ['class' => 'form-control', 'placeholder' => ' Laissez votre Numéro']) !!}
+          {!! $errors->first('number', '<small class="help-block"  style="color: #dc3545">:message</small>') !!}
+      </div>
+    </div>
+ <div class="col-md-2 mt-3 text-center">
+
+    {!! Form::submit('Rappelez moi !', ['class' => 'btn btn-info btn-lg  ']) !!} 
+    </div>
+    {!! Form::close() !!}
+      </div>
+    </div>
+    
+
 
   </div>
-</div>
 
-<div class="col-md-3 mt-2 d-flex   justify-content-center">
-{!! Form::submit('Rappelez moi !', ['class' => 'btn btn-secondary btn-lg ']) !!}
-              {!! Form::close() !!}
-</div> 
-</div>
+ 
 
-             
-
-    </div>
 </section>
 
 
@@ -400,7 +428,7 @@
      <!-- <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p> -->
      <ul class="ftco-social text-center">
       <!-- <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li> -->
-      <li class="ftco-animate"><a href="https://www.facebook.com/wima.waouma.7"><span class="icon-facebook"></span></a></li>
+      <li class="ftco-animate"><a href="https://www.facebook.com/wima.waouma.7" rel="noopener noreferrer" target="_blank"><span class="icon-facebook"></span></a></li>
       <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
       <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
     </ul>

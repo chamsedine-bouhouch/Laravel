@@ -25,11 +25,18 @@
     </div>
   </div>
 </section>
+<!--  -->
+
 
 <!-- Site start-->
 <!-- Latest & refference select -->
 <div class="site-section">
   <div class="container">
+     @if ($message = Session::get('success'))
+ <div class="alert alert-success">
+   <p> {{ $message }} </p>
+ </div>
+  @endif
     <div class="row mb-5">
 
 

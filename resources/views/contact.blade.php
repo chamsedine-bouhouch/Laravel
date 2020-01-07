@@ -27,6 +27,11 @@
 
     <section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
 			<div class="container">
+            @if ($message = Session::get('success'))
+ <div class="alert alert-success">
+   <p> {{ $message }} </p>
+ </div>
+  @endif
 				<div class="row d-flex align-items-stretch no-gutters">
 					<div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
            
@@ -52,6 +57,7 @@
           {!! Form::submit('Envoyer !', ['class' => 'btn btn-info pull-right']) !!}
         {!! Form::close() !!}
 					</div>
+          
 					<div class="col-md-6 d-flex align-items-stretch">
 						<div id="map"></div>
 					</div>

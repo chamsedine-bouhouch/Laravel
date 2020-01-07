@@ -26,6 +26,6 @@ class DemandesController extends Controller
 		$demande->phone = $request->input('phone');
 		$demande->save();
 		
-		return view('home');
+		return redirect()->route('services.index')->with('success','Votre demadne est crée avec succès');
 	}
 }
