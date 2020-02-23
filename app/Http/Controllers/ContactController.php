@@ -9,7 +9,7 @@ class ContactController extends Controller {
 
     public function getForm()
 	{
-		return view('contact');
+		return view('HomeTemplate.Bodys.contact');
 	}
 
 	public function postForm(ContactRequest $request)

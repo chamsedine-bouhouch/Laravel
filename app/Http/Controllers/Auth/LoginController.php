@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -37,24 +40,18 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
     // Roles
-    // protected function sendLoginResponse(Request $request)
-    // {
-    //     $request->session()->regenerate();
+    protected function sendLoginResponse(Request $request)
+    {   $user = User::where('email', '=', $request->email)->first();
+    
+        $request->session()->regenerate();
 
-    //     $this->clearLoginAttempts($request);
-
-    //     foreach ($this->guard()->user()->role as $role) {
-    //         if ($role == 'superAdmin') {
-    //             return redirect('dashboard/superAdmin');
-    //         } elseif ($role == 'admin') {
-    //             return redirect('dashboard/admin');
-    //         }elseif ($role == 'technicien') {
-    //             return redirect('dashboard/technicien');
-    //         }elseif ($role == 'user') {
-    //             return redirect('dashboard/user');
-    //         }
-
+        $this->clearLoginAttempts($request);
+             if($user->Role==1){
+                 return redirect('/');
+             }
+             elseif($user->Role==2){return redirect('/services');}
+             else{return redirect('/contact');}
             
-    //     }
-    // }
+       
+    }
 }

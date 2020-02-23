@@ -15,7 +15,7 @@ class EmailController extends Controller
 
     public function getForm()
 	{
-		return view('home');
+		return view('HomeTemplate.Bodys.Homy');
 	}
 	public function postForm(EmailRequest $request)
 	{

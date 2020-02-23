@@ -14,28 +14,28 @@ class ServicesController extends Controller
      */
     public function index()
     {
-    	$services_db = Service::get();
+        $services_db = Service::get();
 
-    	$services = new Service;
+        $services = new Service;
         // $services = Service::where('categorie','électricité')->paginate(5);
         // $installation = Service::orderBy('type','installation');
         if (request()->has('categorie')){
-        	$services = $services->where('categorie',request('categorie'));
-        	
+            $services = $services->where('categorie',request('categorie'));
+            
         }
         if ( request()->has('type')){
-        	$services = $services->where('type',request('type'));
+            $services = $services->where('type',request('type'));
         } 
 
-        	$services = $services->paginate(5)->appends([
-        		'categorie' => request('categorie'),
-        		'type' => request('type'),
-        	]);
+            $services = $services->paginate(9)->appends([
+                'categorie' => request('categorie'),
+                'type' => request('type'),
+            ]);
        
       
 
 
-        return view('services.index',compact('services','services_db'));
+        return view('HomeTemplate.Bodys.ListesServices',compact('services','services_db'));
     }
 
     /**
@@ -73,12 +73,12 @@ class ServicesController extends Controller
         $similarServices =Service::where('categorie', $cat)->get();
 
         
-        	// $similarServices->where('categorie',request('categorie'));
-        	
+            // $similarServices->where('categorie',request('categorie'));
+            
    
 
       
-        return view('services.show',compact('service','similarServices'));  
+        return view('HomeTemplate.Bodys.service',compact('service','similarServices'));  
     }
 
     /**
@@ -113,5 +113,59 @@ class ServicesController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    function action(Request $request)
+    {
+     if($request->ajax())
+     {
+      $output = '';
+      $query = $request->get('query');
+      if($query != '')
+      {
+       $data = DB::table('Services')
+         ->where('titre', 'like', '%'.$query.'%')
+         ->orWhere('categorie', 'like', '%'.$query.'%')
+   
+         ->orderBy('titre', 'desc')
+         ->get();
+         
+      }
+      else
+      {
+       $data = DB::table('Services')
+         ->orderBy('titre', 'desc')
+         ->get();
+      }
+      $total_row = $data->count();
+      if($total_row > 0)
+      {
+        
+       foreach($data as $row)
+       {
+        $output .= '
+        <ul>
+         <li"><a href="serv'.$row->id.'" style="color:white">  '.$row->titre.'</a></li>
+        
+        </ul>
+        ';
+       }
+      }
+      else
+      {
+       $output = '
+       <ul>
+        <li align="center" colspan="5"style="background-color:red;">No Data Found</li>
+       </ul>
+       ';
+      }
+      $data = array(
+       'table_data'  => $output,
+    
+      );
+
+      echo json_encode($data);
+     }
     }
 }

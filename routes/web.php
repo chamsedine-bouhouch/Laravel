@@ -11,23 +11,45 @@
 |
 */
 // Route::get('/about', 'AboutController@showabout');
-// 
-Route::resource('services', 'ServicesController');
-// Route::get('/single-service', 'SingleServiceController@show_single_service');
-// Route::get('/projects', 'ProjectsController@showprojects');
-// Route::get('/blog', 'BlogController@showblog');
-// Route::get('/single-blog', 'SingleBlogController@show_single_blog');
 
-Route::post('services.show', 'DemandesController@post')->name('storeDemande');
+
+
+
+//Route::get('/', 'EmailController@getForm')->name('home');
+Route::get('/services', 'ServicesController@index');
+
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('homez');
+
+
+
+Route::post('/candidatez', 'EmailController@techForm')->name('storePost');
+Route::post('services', 'DemandesController@store')->name('storeDemande');
+Route::get('formulaire', 'ServicesController@formulaire');
 
 Route::get('contact', 'ContactController@getForm')->name('contact');
 Route::post('contact', 'ContactController@postForm');
+
 
 Route::get('/', 'EmailController@getForm')->name('home');
 Route::post('/newsletters',  'EmailController@postForm')->name('storeEmail');
 
 Route::post('/candidatez', 'EmailController@techForm')->name('storePost');
 Route::post('/Rappelez', 'EmailController@phone')->name('storePhone');
+Route::get('/action', 'ServicesController@action')->name('live_search.action');
+Route::get('/serv{id}', 'ServicesController@show');
+
+Route::get('contact', 'ContactController@getForm')->name('contact');
+Route::post('contact', 'ContactController@postForm');
+
+Route::get('listUser','UserController@index')->name('listUser');
+Route::delete('listUser/{id}','UserController@destroy')->name('user.destroy');
+//user.edit
+Route::get('User/{id}','UserController@update')->name('user.edit');
+Route::put('User/{id}','UserController@update');
+
+   
 
 
 // Route::get('/connect', function () {
