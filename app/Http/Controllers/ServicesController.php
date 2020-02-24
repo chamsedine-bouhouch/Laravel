@@ -141,7 +141,6 @@ class ServicesController extends Controller
       $total_row = $data->count();
       if($total_row > 0)
       {
-        
        foreach($data as $row)
        {
         $output .= '

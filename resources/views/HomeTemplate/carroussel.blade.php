@@ -1,6 +1,6 @@
 
 <section class="ftco-intro" style="background-image:url(images/bg_1.jpg);" data-stellar-background-ratio="0.1"> 
-    <div class="overlay " style="background: #e4dbdb;opacity:0.8"> 
+    <div class="overlay " style="background: #e4dbdb;opacity:0.8"> </div>
      
        <div class="container">
     
@@ -12,6 +12,7 @@
       </div>
     </div>
   </div>
+
   
   </section>
   <!--  <div class=" col-lg-3"  style="background-color:black ; display: none; "  id="re" > --> 

@@ -4,13 +4,23 @@
         <span class="oi oi-menu"></span> Menu
       </button>
       <!-- Search form -->
-      
 
+
+      
+       <form action="#" class="searchform order-lg-last">
+        <div class="form-group d-flex active-cyan-3 active-cyan-4">
+          <input type="text" class="form-control pl-3" placeholder="Que cherchez vous?">
+          <button type="submit" placeholder="" class="form-control search"><span class="ion-ios-search"></span></button>
+
+
+        </div>
+
+      </form>  
 
 
      
       <div class="collapse navbar-collapse" id="ftco-nav">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav ml-3">
          <li class="nav-item  ">
            <a class="" href="" class="">
           <img src="images/logo-white.png" alt="mon logo" style="height:30px"/></a></li>
@@ -31,17 +41,11 @@
      
         </ul>
 
-      </div>  
+      </div>
+     
       <!--    <li class="nav-item"><a href="about" class="nav-link">À Propos</a></li>
          <li class="nav-item"><a href="projects" class="nav-link">Projets</a></li>
          <li class="nav-item"><a href="blog" class="nav-link">Blog</a></li> -->
-     
-      <form action="#" class="searchform order-lg-last">
-        <div class="form-group d-flex">
-          <input type="text" class="form-control pl-3" placeholder="Que cherchez vous?">
-          <button type="submit" placeholder="" class="form-control search"><span class="ion-ios-search"></span></button>
-        </div>
-      </form>
+    </div>
 
  </nav>
-    
